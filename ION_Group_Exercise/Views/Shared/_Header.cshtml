@@ -1,0 +1,25 @@
+﻿@{ 
+    Layout = null;
+}
+<!-- navbar-->
+<header class="header">
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a href="#" class="navbar-brand"><img src="~/Utilities/img/logo.png" alt="" class="img-fluid" width="80" height="80"></a>
+            <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right">Menu<i class="fa fa-bars ml-2"></i></button>
+            <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                </ul>
+                @if (Session["LoggedInUser"] != null)
+                {
+                    <img id="loaderLogout" src="~/Utilities/img/loading.gif" style="display:none" />
+                    <button id="btnLogout" class="btn btn-primary navbar-btn ml-0 ml-lg-3" style="cursor:pointer">Logout </button>
+                }
+                else
+                {
+                    <button data-keyboard="false" data-backdrop="static" data-toggle="modal" data-target="#login" class="btn btn-primary navbar-btn ml-0 ml-lg-3">Login </button>
+                }
+            </div>
+        </div>
+    </nav>
+</header>
