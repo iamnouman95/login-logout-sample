@@ -115,6 +115,7 @@ namespace LoginLogoutSample.Areas.HomePage.Controllers
                     errorMessage = "Network Error: " + exc.Message +
                                   "\nStatus code: " + exc.Status
                 };
+
                 return Json(errResult);
             }
             catch (Exception ex)
@@ -124,6 +125,7 @@ namespace LoginLogoutSample.Areas.HomePage.Controllers
                     success = false,
                     errorMessage = ex.Message
                 };
+
                 return Json(errResult);
             }
         }
